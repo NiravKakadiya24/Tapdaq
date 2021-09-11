@@ -1,0 +1,19 @@
+name: tapdaq_flutter
+description: Tapdaq Flutter plugin that shows banner ads using mediation platform.
+version: 0.0.1
+homepage: https://github.com/nathanael540/tapdaq_flutter
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.10.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.solion.tapdaqflutter
+        pluginClass: TapdaqFlutterPlugin

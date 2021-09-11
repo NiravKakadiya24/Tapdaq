@@ -1,0 +1,54 @@
+group 'com.solion.tapdaqflutter'
+version '0.0.1'
+
+buildscript {
+    ext.kotlin_version = '1.3.61'
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://android-sdk.tapdaq.com"
+            allowInsecureProtocol = true
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://android-sdk.tapdaq.com"
+            allowInsecureProtocol = true
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+
+android {
+    compileSdkVersion 28
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.5.3'
+}
