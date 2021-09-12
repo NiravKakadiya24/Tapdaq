@@ -52,4 +52,7 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.0'
+    implementation 'com.tapdaq.sdk:TapdaqFANAdapter:7.9.0'
+
+    implementation 'com.tapdaq.sdk:TapdaqAdMobAdapter:7.9.0'
 }
