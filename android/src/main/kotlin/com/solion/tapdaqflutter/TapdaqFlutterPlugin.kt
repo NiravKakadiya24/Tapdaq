@@ -55,6 +55,7 @@ class TapdaqFlutterPlugin(private val activity: Activity, private val channel: M
               config.setUserSubjectToGDPR(GDPR)
               config.setConsentStatus(ConsentStatus)
               config.setAgeRestrictedUserStatus(Restricted)
+              config.setAutoReloadAds(true)
 
               Tapdaq.getInstance().initialize(
                       activity,
