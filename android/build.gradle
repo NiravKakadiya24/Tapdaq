@@ -6,10 +6,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url "https://android-sdk.tapdaq.com"
-            allowInsecureProtocol = true
-        }
+           maven { url "https://android-sdk.tapdaq.com" }
     }
 
     dependencies {
@@ -23,10 +20,7 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            url "https://android-sdk.tapdaq.com"
-            allowInsecureProtocol = true
-        }
+         maven { url "https://android-sdk.tapdaq.com" }
     }
 }
 
